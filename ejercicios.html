@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Interactivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ejercicios Interactivos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="articulos.html">Artículos</a></li>
+                <li><a href="evaluaciones.html">Evaluaciones</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="foro.html">Foro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Practica tus conocimientos</h2>
+            <p>Selecciona la respuesta correcta:</p>
+
+            <form>
+                <label for="question1">¿Cuál es la capital de Francia?</label>
+                <select id="question1">
+                    <option value="1">Berlín</option>
+                    <option value="2">Madrid</option>
+                    <option value="3">París</option>
+                    <option value="4">Londres</option>
+                </select>
+
+                <button type="button" onclick="verificarRespuestas()">Verificar</button>
+
+                <p id="resultado"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Plataforma Educativa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function verificarRespuestas() {
+            let respuesta = document.getElementById('question1').value;
+            let resultado = document.getElementById('resultado');
+            if (respuesta == 3) {
+                resultado.innerText = '¡Correcto!';
+            } else {
+                resultado.innerText = 'Inténtalo de nuevo.';
+            }
+        }
+    </script>
+</body>
+</html>
